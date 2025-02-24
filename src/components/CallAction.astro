@@ -1,0 +1,32 @@
+---
+const { text } = Astro.props;
+---
+
+<a href='#register'>
+  <button
+    class='bg-primary text-white border border-[#801FC6] rounded-xl shadow-lg px-10 text-xl py-6 sm:text-lg md:text-xl lg:text-2xl animate-jump hover:scale-110 transition-all duration-300'
+  >
+    {text}
+  </button>
+</a>
+
+<style>
+  @keyframes jump {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-jump {
+    animation: jump 1s infinite;
+  }
+
+  a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+  }
+</style>

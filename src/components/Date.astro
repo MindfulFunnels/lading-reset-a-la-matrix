@@ -1,0 +1,59 @@
+---
+import clientData from "../data/config";
+const { day, month, hour } = clientData.eventDate;
+
+// Cálculo de los horarios internacionales
+const eventTimes = [
+  { country: "España", flag: "fi fi-es", time: `${hour}:00hs ` }, // España (horario base)
+  { country: "Argentina", flag: "fi fi-ar", time: `${hour - 4}:00hs ` }, // CET - 4 horas
+  { country: "Colombia", flag: "fi fi-co", time: `${hour - 6}:00hs ` }, // CET - 6 horas
+  { country: "México", flag: "fi fi-mx", time: `${hour - 7}:00hs ` }, // CET - 7 horas
+];
+---
+
+<div class='flex flex-col items-center'>
+  <div class='flex flex-wrap justify-center gap-2 text-center'>
+    <h2
+      class='text-3xl font-bold text-white lg:text-4xl'
+      style='text-shadow: 
+    0 0 2px #801FC6, 
+    0 0 4px #801FC6, 
+    0 0 8px #801FC6, 
+    0 0 12px #801FC6, 
+    0 0 16px #801FC6'
+    >
+      DOMINGO
+      {day}
+      DE
+      {month}
+    </h2>
+
+    <span class='flag-icon flag-icon-es'></span>
+  </div>
+
+  <div class='mt-4'>
+    <ul
+      class='grid grid-cols-1 gap-2 mt-2 text-center md:grid-cols-2 lg:grid-cols-4'
+    >
+      {
+        eventTimes.map((event) => (
+          <li class='items-center gap-2 text-2xl font-bold text-white'>
+            <span class={event.flag} />
+            <span
+              class='text-white'
+              style='text-shadow: 
+              0 0 2px #801FC6, 
+              0 0 4px #801FC6, 
+              0 0 8px #801FC6, 
+              0 0 12px #801FC6, 
+              0 0 16px #801FC6'
+            >
+              {event.country}{" "}
+            </span>
+            <span class='text-white'>{event.time}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
