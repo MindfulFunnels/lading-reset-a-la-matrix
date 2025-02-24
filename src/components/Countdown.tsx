@@ -61,10 +61,13 @@ const Countdown = ({ deadline }: { deadline: string }) => {
           href='https://www.youtube.com/watch?v=76v5oumR00M'
           target='_blank'
           rel='noreferrer'
+          className='inline-flex items-center justify-center px-10 text-3xl py-6 font-semibold text-white
+         bg-gradient-to-r from-red-500 to-pink-500
+         rounded-md shadow-md hover:from-pink-500 hover:to-red-500
+         focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+         hover:scale-110 transition-all duration-300'
         >
-          <button className='bg-primary text-white border border-[#801FC6] rounded-xl shadow-lg px-10 text-xl py-6 sm:text-lg md:text-xl lg:text-2xl'>
-            VER EN YOUTUBE
-          </button>
+          VER EN YOUTUBE
         </a>
       </div>
     );
