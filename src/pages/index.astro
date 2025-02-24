@@ -9,6 +9,7 @@ import VideosTestimonies from "../components/Videos-testimonies.astro";
 import TakeAway from "../components/TakeAway.astro";
 import AddressedTo from "../components/AddressedTo.astro";
 import RegisterBox from "../components/RegisterBox";
+import CallAction from "../components/CallAction.astro";
 
 const { eventDateForCountdown } = clientData;
 ---
@@ -56,7 +57,7 @@ const { eventDateForCountdown } = clientData;
            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
            hover:scale-110 transition-all duration-300'
       >
-        Comprar Membresía
+        acceder ahora
       </a>
     </div>
     <!-- <div
@@ -109,12 +110,21 @@ const { eventDateForCountdown } = clientData;
             </div>
           </div> -->
     <WhatYouWillLearn />
-    <!-- <CallAction text='Cambiar mi vida' /> -->
+    <CallAction
+      text='Resetea tu realidad'
+      href='https://buy.stripe.com/bIY02y5sH8k2b4Y4gu'
+    />
     <TakeAway />
     <AddressedTo />
-    <!-- <CallAction text='Registrate acá' /> -->
+    <CallAction
+      text='Despierta tu mente'
+      href='https://buy.stripe.com/bIY02y5sH8k2b4Y4gu'
+    />
     <VideosTestimonies />
-    <!-- <CallAction text='Apuntarme ahora' /> -->
+    <CallAction
+      text='Libera tu potencial'
+      href='https://buy.stripe.com/bIY02y5sH8k2b4Y4gu'
+    />
     <History />
   </div>
 </Layout>
