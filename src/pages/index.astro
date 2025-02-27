@@ -15,9 +15,9 @@ const { eventDateForCountdown } = clientData;
 ---
 
 <Layout>
-  <div class='flex flex-col items-center w-full gap-20 pt-2 text-center'>
-    <div class='flex flex-col items-center justify-center gap-2'>
-      <div class='flex flex-col items-center justify-center gap-6 pb-10'>
+  <div class='flex flex-col gap-20 items-center pt-2 w-full text-center'>
+    <div class='flex flex-col gap-2 justify-center items-center'>
+      <div class='flex flex-col gap-6 justify-center items-center pb-10'>
         <h2
           class='m-4 text-base text-white sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'
         >
@@ -31,55 +31,51 @@ const { eventDateForCountdown } = clientData;
       <!-- <Date /> -->
       <Countdown deadline={eventDateForCountdown} client:load />
     </div>
-    <div class='flex flex-col items-center justify-center gap-6'>
-      <h1 class='text-xl md:text-2xl lg:text-4xl xl:text-7xl font-bold'>
+    <div class='flex flex-col gap-6 justify-center items-center'>
+      <h1 class='text-xl font-bold md:text-2xl lg:text-4xl xl:text-7xl'>
         Ya puedes acceder a la Membresía
       </h1>
       <h2
-        class='text-lg md:text-xl lg:text-2xl xl:text-5xl font-thin text-white'
+        class='text-lg font-thin text-white md:text-xl lg:text-2xl xl:text-5xl'
       >
         Recuerda que las clases comienzan el <span class='font-bold'>
           miércoles 26 de febrero</span
         >
       </h2>
       <h2
-        class='text-lg md:text-xl lg:text-2xl xl:text-5xl font-bold text-red-500'
+        class='text-lg font-bold text-red-500 md:text-xl lg:text-2xl xl:text-5xl'
       >
         !Quedan pocos cupos disponibles!
       </h2>
       <img src='/capturas.png' alt='' />
       <a
-        href='https://buy.stripe.com/bIY02y5sH8k2b4Y4gu'
+        href='/membresia'
         target='_blank'
-        class='inline-flex items-center justify-center px-10 text-3xl py-6 font-semibold text-white
-           bg-gradient-to-r from-purple-500 to-indigo-500
-           rounded-md shadow-md hover:from-purple-600 hover:to-indigo-600
-           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
-           hover:scale-110 transition-all duration-300'
+        class='inline-flex justify-center items-center px-10 py-6 text-3xl font-semibold text-white bg-gradient-to-r from-purple-500 to-indigo-500 rounded-md shadow-md transition-all duration-300 hover:from-purple-600 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:scale-110'
       >
-        Acceder ahora
+        Conocer más
       </a>
     </div>
     <!-- <div
-            class='flex flex-col items-center justify-center w-full gap-10 md:gap-20 lg:flex-row'
+            class='flex flex-col gap-10 justify-center items-center w-full md:gap-20 lg:flex-row'
           >
             <div
-              class='flex flex-col items-center justify-center gap-2'
+              class='flex flex-col gap-2 justify-center items-center'
               id='register'
             >
               <RegisterBox client:only='react' />
             </div>
-            <div class='flex flex-col items-center justify-center gap-6'>
+            <div class='flex flex-col gap-6 justify-center items-center'>
               <h2
                 class='text-base text-white sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'
               >
                 Unete ahora y enterate de todo sobre el evento
               </h2>
               <button
-                class='px-10 py-6 text-xl text-white bg-green-500 border border-green-700 shadow-lg rounded-xl sm:text-lg md:text-xl lg:text-2xl'
+                class='px-10 py-6 text-xl text-white bg-green-500 rounded-xl border border-green-700 shadow-lg sm:text-lg md:text-xl lg:text-2xl'
               >
                 <a
-                  class='flex flex-row items-center justify-center gap-2'
+                  class='flex flex-row gap-2 justify-center items-center'
                   href='https://chat.whatsapp.com/BxaoSB9OswI2mkzgzjQTIT'
                   target='_blank'
                 >

@@ -1,0 +1,77 @@
+---
+const { title, price, link } = Astro.props;
+---
+
+<a
+  href={link}
+  target='_blank'
+  class='group relative flex flex-col items-center justify-center w-full overflow-hidden rounded-2xl bg-gradient-to-br from-rose-600 via-amber-500 to-rose-600 p-0.5 transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_5px_rgba(225,29,72,0.3)]'
+>
+  <div
+    class='flex relative flex-col justify-center items-center px-8 py-6 w-full h-full bg-gradient-to-br from-rose-600 via-amber-500 to-rose-600 rounded-2xl transition-all duration-500'
+  >
+    <div
+      class='absolute inset-0 bg-gradient-to-br to-transparent opacity-80 from-black/50'
+    >
+    </div>
+
+    <div class='flex relative flex-col gap-2 items-center'>
+      <div class='flex gap-3 items-center'>
+        <span
+          class='text-5xl font-black text-white [text-shadow:_2px_2px_10px_rgb(255_255_255_/_30%)]'
+        >
+          {price}
+        </span>
+      </div>
+
+      <h3
+        class='text-2xl font-bold text-white [text-shadow:_2px_2px_10px_rgb(255_255_255_/_30%)]'
+      >
+        {title}
+      </h3>
+
+      <div
+        class='flex gap-2 items-center px-6 py-2 mt-4 bg-gradient-to-r rounded-xl border backdrop-blur-sm transition-all duration-500 from-white/10 to-white/5 hover:from-white/20 hover:to-white/10 border-white/10'
+      >
+        <span class='text-xl font-bold text-white'>COMPRAR AHORA</span>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          class='w-6 h-6 text-white transition-transform duration-500 group-hover:translate-x-1'
+          fill='none'
+          viewBox='0 0 24 24'
+          stroke='currentColor'
+        >
+          <path
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            stroke-width='2'
+            d='M13 7l5 5m0 0l-5 5m5-5H6'></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class='overflow-hidden absolute -bottom-1 -right-2 -left-2'>
+      <div class='relative h-2'>
+        <div
+          class='absolute inset-0 bg-gradient-to-r from-rose-500 via-amber-400 to-rose-500'
+        >
+        </div>
+        <div
+          class='absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent animate-[shine_2s_linear_infinite]'
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+
+<style>
+  @keyframes shine {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+</style>
