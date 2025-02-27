@@ -15,6 +15,8 @@ export const POST = async ({ request }) => {
     switch (event.type) {
       case "checkout.session.completed":
         const checkoutSessionCompleted = event.data.object;
+
+        // ACA DEBERIA IR EL IF PARA VERIFICAR SI EL PRODUCTO ES EL CORRECTO
         const customer = checkoutSessionCompleted.customer_details;
         const email = customer.email;
         const name = customer.name;
