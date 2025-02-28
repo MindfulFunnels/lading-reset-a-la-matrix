@@ -3,13 +3,8 @@ const { text, href } = Astro.props;
 ---
 
 <a
-  href={href}
-  target='_blank'
-  class='inline-flex items-center justify-center px-10 text-3xl py-6 font-semibold text-white
-           bg-gradient-to-r from-purple-500 to-indigo-500
-           rounded-md shadow-md hover:from-purple-600 hover:to-indigo-600
-           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
-           hover:scale-110 transition-all duration-300 animate-jump'
+  href='#membership-section'
+  class='inline-flex justify-center items-center px-10 py-6 text-3xl font-semibold text-white bg-gradient-to-r from-orange-400 to-orange-600 rounded-md shadow-md transition-all duration-300 hover:from-orange-500 hover:to-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 hover:scale-110 animate-jump'
 >
   {text}
 </a>

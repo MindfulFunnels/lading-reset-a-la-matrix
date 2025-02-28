@@ -46,29 +46,14 @@ const Countdown = ({ deadline }: { deadline: string }) => {
 
   if (timeLeft.live) {
     return (
-      <div className='flex flex-col items-center justify-center w-full gap-4 text-lg font-bold'>
-        <h1 className='text-xl md:text-2xl lg:text-4xl xl:text-7xl font-bold'>
-          Mira la Masterclass acá
-        </h1>
+      <div className='flex flex-col gap-4 justify-center items-center w-full text-lg font-bold'>
         <iframe
-          className='w-[373px] h-[210px] md:w-[533px] md:h-[300px] lg:w-[667px] lg:h-[375px] mt-4'
+          className='w-[400px] h-[225px] md:w-[600px] md:h-[338px] lg:w-[800px] lg:h-[450px] mt-4 px-4'
           src='https://www.youtube.com/embed/76v5oumR00M?si=BOe079D0g5zkXx5E'
           title='YouTube video player'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
           allowFullScreen
         ></iframe>
-        <a
-          href='https://www.youtube.com/watch?v=76v5oumR00M'
-          target='_blank'
-          rel='noreferrer'
-          className='inline-flex items-center justify-center px-10 text-3xl py-6 font-semibold text-white
-         bg-gradient-to-r from-red-500 to-pink-500
-         rounded-md shadow-md hover:from-pink-500 hover:to-red-500
-         focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
-         hover:scale-110 transition-all duration-300'
-        >
-          VER EN YOUTUBE
-        </a>
       </div>
     );
   }
@@ -76,13 +61,13 @@ const Countdown = ({ deadline }: { deadline: string }) => {
   const unidades = ["Días", "Horas", "Minutos", "Segundos"]; // Traducción de las unidades
 
   return (
-    <div className='flex flex-wrap items-center justify-center w-full gap-2 md:gap-4 lg:gap-6 count-down-main'>
+    <div className='flex flex-wrap gap-2 justify-center items-center w-full md:gap-4 lg:gap-6 count-down-main'>
       {["days", "hours", "minutes", "seconds"].map((unit, index) => (
         <div
           key={index}
           className='timer flex flex-col items-center bg-black/60 border border-[#801FC6] rounded-xl shadow-lg py-2 px-4 min-w-[60px] max-w-[80px] md:min-w-[80px] md:max-w-[100px] lg:min-w-[100px] lg:max-w-[120px]'
         >
-          <div className='flex items-center justify-center w-full text-center'>
+          <div className='flex justify-center items-center w-full text-center'>
             <h3
               className={`countdown-element ${unit} font-manrope font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#FFFFFF] tracking-widest`}
               style={{
